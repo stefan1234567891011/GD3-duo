@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+
 public class DragDrop : MonoBehaviour, IPointerDownHandler , IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
 {
     private RectTransform rectTransform;
@@ -14,24 +15,33 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler , IBeginDragHandler, 
     }
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("OnPointerDown");
+       // Debug.Log("OnPointerDown");
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("OnBeginDrag");
+        //Debug.Log("OnBeginDrag");
         canvasGroup.alpha = .6f;
         canvasGroup.blocksRaycasts = false;
     }
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("OnEndDrag");
+        /*Debug.Log("OnEndDrag");
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
+        Ray ray = Camera.main.ScreenPointToRay(eventData.position);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit,100.0f))
+        {
+            if(hit.transform)
+            {
+                rectTransform.transform.localPosition = hit.transform.localPosition;
+            }
+        }*/
     }
     public void OnDrag(PointerEventData eventData)
     {
-        Debug.Log("OnDrag");
-        rectTransform.anchoredPosition += eventData.delta;
+        ///Debug.Log("OnDrag");
+        //rectTransform.anchoredPosition += eventData.delta;
     }
     public void OnDrop(PointerEventData eventData)
     {
