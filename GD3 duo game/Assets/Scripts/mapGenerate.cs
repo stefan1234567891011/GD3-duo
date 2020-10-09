@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class mapGenerate : MonoBehaviour
 {
     public GameObject tilePrefab;
+    public SpawnEnemy spawn;
+
     public int mapWith = 3;
     public int mapHeight = 5;
 
@@ -23,9 +25,12 @@ public class mapGenerate : MonoBehaviour
             for (int y = 0; y < mapHeight; y++)
             {
                 GameObject  tempObj = Instantiate(tilePrefab);
-                tempObj.transform.position = new Vector3(transform.position.x + (x * offset), transform.position.y + (y * offset), 0);
+                tempObj.transform.position = new Vector3(transform.position.x + (x * offset), transform.position.y + (y * offset), 10);
                 tempObj.transform.parent = transform;
                 tempObj.name = x.ToString() + ", " + y.ToString();
+                if(x == mapWith-1){
+                    spawn.spawnpoints.Add(tempObj);
+                }
             }
         }
     }

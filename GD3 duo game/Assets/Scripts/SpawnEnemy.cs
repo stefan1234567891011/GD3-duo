@@ -14,12 +14,14 @@ public class SpawnEnemy : MonoBehaviour
         time += Time.deltaTime;
         if (time >= spawnCooldown)
         {
+            if(spawnpoints.Count <1)return;
             int rnd = Random.Range(0, spawnpoints.Count);
             GameObject spawnpoint = spawnpoints[rnd];
 
             GameObject temp = Instantiate(Enemy);
-            temp.transform.position = spawnpoint.transform.position;
-            temp.transform.parent = spawnpoint.transform;
+            temp.transform.position = new Vector3(spawnpoint.transform.position.x,spawnpoint.transform.position.y,spawnpoint.transform.position.z-1);
+           
+            temp.transform.parent = transform;
             time = 0;
         }
     }
