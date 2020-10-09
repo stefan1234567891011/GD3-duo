@@ -10,5 +10,6 @@ public class EnemyAttackHandler : MonoBehaviour
         {
             transform.position += new Vector3(3, 0);
         }
+        
     }
 }

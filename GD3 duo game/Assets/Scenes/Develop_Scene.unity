@@ -269,6 +269,10 @@ PrefabInstance:
       propertyPath: spawn
       value: 
       objectReference: {fileID: 992995193}
+    - target: {fileID: 1339472455963734237, guid: d50639da98820844d8484def168e5671, type: 3}
+      propertyPath: wallPrefab
+      value: 
+      objectReference: {fileID: 5510738790273504833, guid: 182e953b1f9dd1d4790845e42a022315, type: 3}
     - target: {fileID: 4721698357031184903, guid: d50639da98820844d8484def168e5671, type: 3}
       propertyPath: m_Name
       value: MapGenerator
