@@ -14,9 +14,9 @@ public class BulletShooter : MonoBehaviour
         time += Time.deltaTime;
         if (time >= attackCooldown)
         {
-            GameObject oject = Instantiate(bullet);
-            oject.transform.position = transform.position;
-            oject.transform.parent = transform;
+            GameObject temp = Instantiate(bullet);
+            temp.transform.position = transform.position;
+            temp.transform.parent = transform;
             time = 0;
         }
     }
