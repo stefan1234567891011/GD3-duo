@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class mapGenerate : MonoBehaviour
 {
-    public Image tilePrefab;
+    public GameObject tilePrefab;
     public int mapWith = 3;
     public int mapHeight = 5;
 
@@ -22,7 +22,7 @@ public class mapGenerate : MonoBehaviour
         {
             for (int y = 0; y < mapHeight; y++)
             {
-                Image  tempObj = Instantiate(tilePrefab);
+                GameObject  tempObj = Instantiate(tilePrefab);
                 tempObj.transform.position = new Vector3(transform.position.x + (x * offset), transform.position.y + (y * offset), 0);
                 tempObj.transform.parent = transform;
                 tempObj.name = x.ToString() + ", " + y.ToString();
