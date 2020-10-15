@@ -7,6 +7,7 @@ public class ButtonClick : MonoBehaviour
 {
     // Update is called once per frame
     private Touch touch;
+    public GameObject tower;
     void Start() 
     {
         if (Input.touchCount>0)
@@ -26,7 +27,25 @@ public class ButtonClick : MonoBehaviour
             transform.position = touchPosition;
         }
         if(touch.phase == TouchPhase.Canceled || touch.phase == TouchPhase.Ended){
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            {
+                if(hit.transform.tag == "Floor")
+                {
+                    GameObject hitObj = hit.transform.gameObject;
+                    GameObject temp = Instantiate(tower);
+                    Vector3 pos = hitObj.transform.position;
+                    pos.z -=1;
+                    temp.transform.position = pos;
+                
+                    Destroy(gameObject);
+                    return;
+                }
+            }
             Destroy(gameObject);
+           // Debug.Log(hitTile());
+            
         }
 
             
