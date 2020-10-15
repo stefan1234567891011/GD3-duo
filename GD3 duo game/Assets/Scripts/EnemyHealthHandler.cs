@@ -16,5 +16,9 @@ public class EnemyHealthHandler : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+        else if(collision.gameObject.tag == "Wall")
+        {
+            Destroy(gameObject);
+        }
     }
 }
