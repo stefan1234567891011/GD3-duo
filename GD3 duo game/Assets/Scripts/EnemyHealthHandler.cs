@@ -12,7 +12,6 @@ public class EnemyHealthHandler : MonoBehaviour
         LaneRefrens laneRefrens = gameObject.GetComponent<LaneRefrens>();
 
         GameObject lane = laneRefrens.Lane;
-        Debug.Log(lane.name);
         laneCounter = lane.GetComponent<LaneCounter>();
         laneCounter.Counter ++;
         

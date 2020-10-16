@@ -38,6 +38,9 @@ public class ButtonClick : MonoBehaviour
                     Vector3 pos = hitObj.transform.position;
                     pos.z -=1;
                     temp.transform.position = pos;
+                    LaneRefrens lanerefspawnpoint = hitObj.GetComponent<LaneRefrens>();
+                    LaneRefrens lanerefunit = temp.GetComponent<LaneRefrens>();
+                    lanerefunit.Lane = lanerefspawnpoint.Lane;
                 
                     Destroy(gameObject);
                     return;
