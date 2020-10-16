@@ -95,6 +95,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4b91bb0f43acb74da4f63cebf1f1167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 6654561464204625581, guid: b6096d22e11729d4db74b638f68aecca, type: 3}
+  enemy: {fileID: 6654561464204625581, guid: b6096d22e11729d4db74b638f68aecca, type: 3}
   spawnpoints: []
+  time: 0
   spawnCooldown: 2
+  wave: 1
+  amountOfCircles: 1
+  amountOfOvals: 0
+  waveTime: 10
+  breakTime: 5
+  waveBusy: 1
+  amountOfCirclesLeft: 0
+  amountOfOvalsLeft: 0
+  circleTime: 0
+  ovalTime: 0
+  circleTimer: 0
+  ovalTimer: 0

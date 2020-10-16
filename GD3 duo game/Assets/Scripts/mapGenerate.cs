@@ -30,11 +30,11 @@ public class mapGenerate : MonoBehaviour
                 if(x==0)
                 {
                     GameObject  tempWallObj = Instantiate(wallPrefab);
-                    tempWallObj.transform.position = new Vector3(transform.position.x + (-2* offset), transform.position.y  + (y * offset), 10);
+                    tempWallObj.transform.position = new Vector3(transform.position.x + (-1* offset), transform.position.y  + (y * offset), 10);
                     tempWallObj.transform.parent = transform;
                     tempWallObj.name = x.ToString() + "left";
                     GameObject  tempWallObj2 = Instantiate(wallPrefab);
-                    tempWallObj2.transform.position = new Vector3(transform.position.x + ((mapWith+2 )* offset), transform.position.y  + (y * offset), 10);
+                    tempWallObj2.transform.position = new Vector3(transform.position.x + ((mapWith+1 )* offset), transform.position.y  + (y * offset), 10);
                     tempWallObj2.transform.parent = transform;
                     tempWallObj2.name = x.ToString() + "right";
                 }
