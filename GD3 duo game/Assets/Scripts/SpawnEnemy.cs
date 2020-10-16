@@ -94,6 +94,9 @@ public class SpawnEnemy : MonoBehaviour
             temp.transform.position = spawnpoint.transform.position + new Vector3(0, 0, -1);
 
             temp.transform.parent = transform;
+            LaneRefrens lanerefspawnpoint = spawnpoint.GetComponent<LaneRefrens>();
+            LaneRefrens lanerefunit = temp.GetComponent<LaneRefrens>();
+            lanerefunit.Lane = lanerefspawnpoint.Lane;
         }
     }
 }
