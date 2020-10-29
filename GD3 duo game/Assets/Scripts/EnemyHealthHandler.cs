@@ -21,6 +21,7 @@ public class EnemyHealthHandler : MonoBehaviour
         }
         else if(collision.gameObject.tag == "Wall")
         {
+            OnCircleKilled.Invoke();
             Destroy(gameObject);
         }
     }
