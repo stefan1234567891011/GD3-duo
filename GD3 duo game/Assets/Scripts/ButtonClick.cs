@@ -41,6 +41,8 @@ public class ButtonClick : MonoBehaviour
                     LaneRefrens lanerefspawnpoint = hitObj.GetComponent<LaneRefrens>();
                     LaneRefrens lanerefunit = temp.GetComponent<LaneRefrens>();
                     lanerefunit.Lane = lanerefspawnpoint.Lane;
+
+                    FindObjectOfType<RescourceManager>().TurretBought(FindObjectOfType<RescourceManager>().Tower1Cost);
                 
                     Destroy(gameObject);
                     return;

@@ -5,9 +5,22 @@ using UnityEngine;
 public class SpawnObject : MonoBehaviour
 {
     public GameObject Object;
+
+    private bool onClickEnabled;
     public void OnClick()
     {
-        Debug.Log("test");
-         GameObject temp = Instantiate(Object);
+        if (onClickEnabled)
+        {
+            Instantiate(Object);
+        }
+    }
+
+    public void EnableOnClick()
+    {
+        onClickEnabled = true;
+    }
+    public void DisableOnClick()
+    {
+        onClickEnabled = false;
     }
 }
