@@ -9,6 +9,7 @@ public class RescourceManager : MonoBehaviour
     public static int resources = 100;
 
     public int Tower1Cost = 100;
+    public int resourcePerEnemyKilled = 100;
 
     public string resourceName = "resource";
     public Text resourceText;
@@ -27,7 +28,7 @@ public class RescourceManager : MonoBehaviour
 
     public void OnCircleKilled()
     {
-        resources += 10;
+        resources += resourcePerEnemyKilled;
     }
 
     public void TurretBought(int cost)
