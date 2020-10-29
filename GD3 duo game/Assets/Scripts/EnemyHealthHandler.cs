@@ -6,8 +6,18 @@ using UnityEngine.Events;
 public class EnemyHealthHandler : MonoBehaviour
 {
     public float health;
+    private LaneCounter laneCounter;
     public UnityEvent OnCircleKilled = new UnityEvent();
 
+    void Start() 
+    {
+        LaneRefrens laneRefrens = gameObject.GetComponent<LaneRefrens>();
+
+        GameObject lane = laneRefrens.Lane;
+        laneCounter = lane.GetComponent<LaneCounter>();
+        laneCounter.Counter ++;
+        
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Bullet")
@@ -15,13 +25,14 @@ public class EnemyHealthHandler : MonoBehaviour
             health -= 1;
             if (health <= 0)
             {
+                laneCounter.Counter --;
                 OnCircleKilled.Invoke();
                 Destroy(gameObject);
             }
         }
         else if(collision.gameObject.tag == "Wall")
         {
-            OnCircleKilled.Invoke();
+            laneCounter.Counter --;
             Destroy(gameObject);
         }
     }

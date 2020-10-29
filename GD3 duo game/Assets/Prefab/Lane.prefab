@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4721698357031184903
+--- !u!1 &7278450025245133429
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,45 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 396897835034491869}
-  - component: {fileID: 1339472455963734237}
+  - component: {fileID: 7142459081420851687}
+  - component: {fileID: 5102982859356761490}
   m_Layer: 0
-  m_Name: MapGenerator
+  m_Name: Lane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &396897835034491869
+--- !u!4 &7142459081420851687
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4721698357031184903}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.2665172, y: -5.1332197, z: 0.375166}
+  m_GameObject: {fileID: 7278450025245133429}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1339472455963734237
+--- !u!114 &5102982859356761490
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4721698357031184903}
+  m_GameObject: {fileID: 7278450025245133429}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd58af2742019d74eb9cf877f687518d, type: 3}
+  m_Script: {fileID: 11500000, guid: efd0dc1b40e764e44816a5cb856a5bd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilePrefab: {fileID: 449433668202983929, guid: 55edff5887f22e445b958c263056de17, type: 3}
-  wallPrefab: {fileID: 5510738790273504833, guid: 182e953b1f9dd1d4790845e42a022315, type: 3}
-  LanePrefab: {fileID: 7278450025245133429, guid: 0516c96258b1de6479f75f8760a7fe5d, type: 3}
-  spawn: {fileID: 0}
-  mapLength: 12
-  mapLanes: 6
-  offset: 1.2
+  Counter: 0
