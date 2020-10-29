@@ -14,7 +14,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ClickAndDRagScene.unity
     guid: 0c6fd0c3a1c700b4bb0169f36a805e03
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Develop_Scene.unity
     guid: 33d02eafa9fccf64cb939efe47b22928
+  - enabled: 1
+    path: Assets/Scenes/EndorResetGame_Scene.unity
+    guid: a90c314f59373024daac87ecc8f268b6
   m_configObjects: {}

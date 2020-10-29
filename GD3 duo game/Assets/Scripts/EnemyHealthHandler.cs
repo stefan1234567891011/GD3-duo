@@ -34,6 +34,7 @@ public class EnemyHealthHandler : MonoBehaviour
         {
             laneCounter.Counter --;
             Destroy(gameObject);
+            FindObjectOfType<GameManagers>().EndGame();
         }
     }
 }
