@@ -16,6 +16,7 @@ public class RescourceManager : MonoBehaviour
 
     private void Start()
     {
+        resources = 100;
         UpdateUI();
     }
 
