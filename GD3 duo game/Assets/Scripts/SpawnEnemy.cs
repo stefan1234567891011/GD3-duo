@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpawnEnemy : MonoBehaviour
 {
     public GameObject enemy;
     public List<GameObject> spawnpoints;
+    public Text waveText;
 
     public float time;
     public float spawnCooldown;
@@ -78,6 +80,7 @@ public class SpawnEnemy : MonoBehaviour
                     time = 0;
                     circleTimer = 0;
                     ovalTimer = 0;
+                    waveText.text = "Wave: " + wave;
                 }
             }
         }
