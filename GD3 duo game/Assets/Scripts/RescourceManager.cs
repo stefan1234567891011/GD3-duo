@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class RescourceManager : MonoBehaviour
 {
-    public int resources = 100;
+    public static int resources = 100;
 
     public void OnCircleKilled()
     {
