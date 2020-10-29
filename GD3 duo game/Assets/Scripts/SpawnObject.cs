@@ -7,7 +7,7 @@ public class SpawnObject : MonoBehaviour
     public GameObject Object;
     public void OnClick()
     {
-        Debug.Log("test");
+        //Debug.Log("test");
          GameObject temp = Instantiate(Object);
     }
 }
