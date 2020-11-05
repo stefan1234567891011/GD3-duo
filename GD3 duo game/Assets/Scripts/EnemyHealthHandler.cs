@@ -9,6 +9,10 @@ public class EnemyHealthHandler : MonoBehaviour
     private LaneCounter laneCounter;
     public UnityEvent OnCircleKilled = new UnityEvent();
 
+    public AudioClip enemyHit;
+    public AudioClip enemyDeath;
+    private AudioSource audioSource;
+
     void Start() 
     {
         LaneRefrens laneRefrens = gameObject.GetComponent<LaneRefrens>();
@@ -16,6 +20,8 @@ public class EnemyHealthHandler : MonoBehaviour
         GameObject lane = laneRefrens.Lane;
         laneCounter = lane.GetComponent<LaneCounter>();
         laneCounter.Counter ++;
+
+        audioSource = GetComponent<AudioSource>();
         
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -27,7 +33,12 @@ public class EnemyHealthHandler : MonoBehaviour
             {
                 laneCounter.Counter --;
                 OnCircleKilled.Invoke();
+                AudioSource.PlayClipAtPoint(enemyDeath, gameObject.transform.position);
                 Destroy(gameObject);
+            }
+            else
+            {
+                audioSource.PlayOneShot(enemyHit);
             }
         }
         else if(collision.gameObject.tag == "Wall")

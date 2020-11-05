@@ -8,6 +8,8 @@ public class ButtonClick : MonoBehaviour
     // Update is called once per frame
     private Touch touch;
     public GameObject tower;
+
+    public AudioClip placeTower;
     void Start() 
     {
         if (Input.touchCount>0)
@@ -43,7 +45,9 @@ public class ButtonClick : MonoBehaviour
                     lanerefunit.Lane = lanerefspawnpoint.Lane;
 
                     FindObjectOfType<RescourceManager>().TurretBought(FindObjectOfType<RescourceManager>().Tower1Cost);
-                
+
+                    AudioSource.PlayClipAtPoint(placeTower, gameObject.transform.position);
+
                     Destroy(gameObject);
                     return;
                 }
