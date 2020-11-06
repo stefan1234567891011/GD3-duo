@@ -8,7 +8,7 @@ public class EnemyAttackHandler : MonoBehaviour
     {
         if (collision.gameObject.tag == "Tower")
         {
-            transform.position += new Vector3(3, 0);
+            transform.position += new Vector3(2, 0);
         }
         
     }

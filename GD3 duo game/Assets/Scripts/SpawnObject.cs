@@ -5,6 +5,8 @@ using UnityEngine;
 public class SpawnObject : MonoBehaviour
 {
     public GameObject Object;
+    private AudioSource audioSource;
+    public AudioClip notEnoughResources;
 
     private bool onClickEnabled;
     public void OnClick()
@@ -12,6 +14,10 @@ public class SpawnObject : MonoBehaviour
         if (onClickEnabled)
         {
             Instantiate(Object);
+        }
+        else
+        {
+            audioSource.PlayOneShot(notEnoughResources);
         }
     }
 
