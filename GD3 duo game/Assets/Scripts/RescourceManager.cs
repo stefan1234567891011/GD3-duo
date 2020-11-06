@@ -8,6 +8,7 @@ public class RescourceManager : MonoBehaviour
 {
     public static int resources = 100;
 
+    public int startingResources = 100;
     public int Tower1Cost = 100;
     public int resourcePerEnemyKilled = 100;
 
@@ -17,7 +18,7 @@ public class RescourceManager : MonoBehaviour
 
     private void Start()
     {
-        resources = 100;
+        resources = startingResources;
         UpdateUI();
     }
 

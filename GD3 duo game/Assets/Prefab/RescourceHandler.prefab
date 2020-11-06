@@ -95,5 +95,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d4e30800a92c9040b5faeeea5ddbd92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealthHandler: {fileID: 0}
-  resources: 100
+  startingResources: 500
+  Tower1Cost: 100
+  resourcePerEnemyKilled: 50
+  resourceName: resource
+  resourceText: {fileID: 0}
+  Tower1Button: {fileID: 0}
