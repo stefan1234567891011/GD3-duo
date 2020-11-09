@@ -255,3 +255,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Object: {fileID: 6356403757205135691, guid: ce1f1ed9ee369ae4fb2f4f0aa7f20a0d, type: 3}
+  notEnoughResources: {fileID: 8300000, guid: 4a040a87e3624c64783e236c4bd12062, type: 3}
+  notEnoughResourcesVolume: 1

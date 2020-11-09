@@ -5,8 +5,8 @@ using UnityEngine;
 public class SpawnObject : MonoBehaviour
 {
     public GameObject Object;
-    private AudioSource audioSource;
     public AudioClip notEnoughResources;
+    public float notEnoughResourcesVolume;
 
     private bool onClickEnabled;
     public void OnClick()
@@ -17,7 +17,7 @@ public class SpawnObject : MonoBehaviour
         }
         else
         {
-            audioSource.PlayOneShot(notEnoughResources);
+            AudioSource.PlayClipAtPoint(notEnoughResources, gameObject.transform.position, notEnoughResourcesVolume);
         }
     }
 

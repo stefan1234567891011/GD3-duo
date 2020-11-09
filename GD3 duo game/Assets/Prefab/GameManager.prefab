@@ -43,3 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e353f8836abf442b26a54fee2e2fae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restart: {fileID: 8300000, guid: 2a9a8ade122a78943a7110d289d99c86, type: 3}
+  gameOver: {fileID: 8300000, guid: 8a964d06e9713ca4cb834cdea83b3f2d, type: 3}
+  restartVolume: 2
+  gameOverVolume: 1

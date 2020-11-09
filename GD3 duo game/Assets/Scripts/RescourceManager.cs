@@ -44,12 +44,12 @@ public class RescourceManager : MonoBehaviour
         {
             if (resources >= Tower1Cost)
             {
-                Tower1Button.enabled = true;
+                Tower1Button.image.color = Color.white;
                 Tower1Button.GetComponent<SpawnObject>().EnableOnClick();
             }
             else
             {
-                Tower1Button.enabled = false;
+                Tower1Button.image.color = Color.grey;
                 Tower1Button.GetComponent<SpawnObject>().DisableOnClick();
             }
         }

@@ -114,8 +114,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
-  towerHit: {fileID: 8300000, guid: dc5832ce230f45b4b844fb422598b680, type: 3}
-  towerDeath: {fileID: 8300000, guid: dc5832ce230f45b4b844fb422598b680, type: 3}
+  towerHit: {fileID: 8300000, guid: 1c33389983ee6ed448a33062d288a631, type: 3}
+  towerDeath: {fileID: 8300000, guid: 48074fca04da3e244acc1814703cd940, type: 3}
 --- !u!61 &4211192501936319131
 BoxCollider2D:
   m_ObjectHideFlags: 0

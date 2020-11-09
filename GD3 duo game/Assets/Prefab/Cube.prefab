@@ -111,6 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tower: {fileID: 4678517651864271533, guid: 430ac4c305d13fd4fad6b9f11123cc7c, type: 3}
   placeTower: {fileID: 8300000, guid: dc5832ce230f45b4b844fb422598b680, type: 3}
+  placeTowerVolume: 1
 --- !u!82 &4638747404610009037
 AudioSource:
   m_ObjectHideFlags: 0

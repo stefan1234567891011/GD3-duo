@@ -10,6 +10,7 @@ public class ButtonClick : MonoBehaviour
     public GameObject tower;
 
     public AudioClip placeTower;
+    public float placeTowerVolume;
     void Start() 
     {
         if (Input.touchCount>0)
@@ -46,7 +47,7 @@ public class ButtonClick : MonoBehaviour
 
                     FindObjectOfType<RescourceManager>().TurretBought(FindObjectOfType<RescourceManager>().Tower1Cost);
 
-                    AudioSource.PlayClipAtPoint(placeTower, gameObject.transform.position);
+                    AudioSource.PlayClipAtPoint(placeTower, gameObject.transform.position, placeTowerVolume);
 
                     Destroy(gameObject);
                     return;
