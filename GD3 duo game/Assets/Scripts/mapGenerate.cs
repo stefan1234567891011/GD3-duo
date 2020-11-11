@@ -8,6 +8,7 @@ public class mapGenerate : MonoBehaviour
     public GameObject tilePrefab;
     public GameObject wallPrefab;
     public GameObject LanePrefab;
+    public BackgrounSoundManager soundcounter;
     public SpawnEnemy spawn;
 
     public int mapLength = 5;
@@ -56,6 +57,7 @@ public class mapGenerate : MonoBehaviour
                         laneref.Lane = Lanes[y];
                         if(x == mapLength-1){
                             spawn.spawnpoints.Add(temptileObj);
+                            soundcounter.list.Add(temptileObj);
                         }
                     }
                 }
