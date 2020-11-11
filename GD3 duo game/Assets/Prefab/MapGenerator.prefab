@@ -46,6 +46,7 @@ MonoBehaviour:
   tilePrefab: {fileID: 449433668202983929, guid: 55edff5887f22e445b958c263056de17, type: 3}
   wallPrefab: {fileID: 5510738790273504833, guid: 182e953b1f9dd1d4790845e42a022315, type: 3}
   LanePrefab: {fileID: 7278450025245133429, guid: 0516c96258b1de6479f75f8760a7fe5d, type: 3}
+  soundcounter: {fileID: 0}
   spawn: {fileID: 0}
   mapLength: 12
   mapLanes: 6
