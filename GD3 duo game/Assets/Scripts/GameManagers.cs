@@ -6,8 +6,6 @@ public class GameManagers : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip restart;
     public AudioClip gameOver;
-    public float restartVolume;
-    public float gameOverVolume;
 
     private void Start()
     {
@@ -16,13 +14,23 @@ public class GameManagers : MonoBehaviour
     public void EndGame()
     {
         Debug.Log("End Game");
-        audioSource.PlayOneShot(gameOver, gameOverVolume);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        audioSource.PlayOneShot(gameOver);
+        ReloadScene();
     }
 
     public void Restart()
     {
-        audioSource.PlayOneShot(restart, restartVolume);
+        audioSource.PlayOneShot(restart);
+        ReloadScene();
+    }
+
+    private void ReloadScene()
+    {
+        Destroy(gameObject, 1);
+    }
+
+    private void OnDestroy()
+    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

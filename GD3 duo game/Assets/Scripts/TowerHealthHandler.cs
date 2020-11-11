@@ -10,9 +10,12 @@ public class TowerHealthHandler : MonoBehaviour
     public AudioClip towerDeath;
     private AudioSource audioSource;
 
+    private Animator animator;
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        animator = GetComponent<Animator>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -22,16 +25,15 @@ public class TowerHealthHandler : MonoBehaviour
             health += -1;
             if (health <= 0)
             {
-                Destroy(gameObject);
-            }
-            if (health <= 0)
-            {
-                AudioSource.PlayClipAtPoint(towerDeath, gameObject.transform.position);
-                Destroy(gameObject);
+                audioSource.PlayOneShot(towerDeath);
+
+                animator.Play("TowerDeathAnimation");
+                Destroy(gameObject, 1);
             }
             else
             {
                 audioSource.PlayOneShot(towerHit);
+                animator.Play("TowerHitAnimation");
             }
         }
     }

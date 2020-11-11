@@ -9,8 +9,8 @@ public class ButtonClick : MonoBehaviour
     private Touch touch;
     public GameObject tower;
 
+    private AudioSource audioSource;
     public AudioClip placeTower;
-    public float placeTowerVolume;
     void Start() 
     {
         if (Input.touchCount>0)
@@ -20,6 +20,8 @@ public class ButtonClick : MonoBehaviour
             touchPosition.z = 0f;
             transform.position = touchPosition;
         }
+
+        audioSource = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -47,9 +49,14 @@ public class ButtonClick : MonoBehaviour
 
                     FindObjectOfType<RescourceManager>().TurretBought(FindObjectOfType<RescourceManager>().Tower1Cost);
 
-                    AudioSource.PlayClipAtPoint(placeTower, gameObject.transform.position, placeTowerVolume);
+                    audioSource.PlayOneShot(placeTower);
 
-                    Destroy(gameObject);
+                    if (gameObject.GetComponent<MeshRenderer>() != null)
+                    {
+                        gameObject.GetComponent<MeshRenderer>().enabled = false;
+                    }
+
+                    Destroy(gameObject, 0.7f);
                     return;
                 }
             }

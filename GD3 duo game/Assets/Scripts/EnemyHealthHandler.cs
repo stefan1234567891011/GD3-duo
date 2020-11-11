@@ -12,8 +12,8 @@ public class EnemyHealthHandler : MonoBehaviour
     public AudioClip enemyHit;
     public AudioClip enemyDeath;
     private AudioSource audioSource;
-    public float enemyHitVolume;
-    public float enemyDeathVolume;
+
+    private Animator animator;
 
     void Start() 
     {
@@ -24,7 +24,7 @@ public class EnemyHealthHandler : MonoBehaviour
         laneCounter.Counter ++;
 
         audioSource = GetComponent<AudioSource>();
-        
+        animator = GetComponent<Animator>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -35,12 +35,14 @@ public class EnemyHealthHandler : MonoBehaviour
             {
                 laneCounter.Counter --;
                 OnCircleKilled.Invoke();
-                AudioSource.PlayClipAtPoint(enemyDeath, gameObject.transform.position, enemyDeathVolume);
-                Destroy(gameObject);
+                audioSource.PlayOneShot(enemyDeath);
+                animator.Play("EnemyDeathAnimation");
+                Destroy(gameObject, 1);
             }
             else
             {
-                audioSource.PlayOneShot(enemyHit, enemyHitVolume);
+                audioSource.PlayOneShot(enemyHit);
+                animator.Play("EnemyHitAnimation");
             }
         }
         else if(collision.gameObject.tag == "Wall")

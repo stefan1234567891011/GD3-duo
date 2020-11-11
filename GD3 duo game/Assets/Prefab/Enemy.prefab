@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 6654561464204625620}
   - component: {fileID: 5454467898685172641}
   - component: {fileID: 3241726752348590699}
+  - component: {fileID: 7600197338537888500}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -179,8 +180,8 @@ MonoBehaviour:
         m_CallState: 2
   enemyHit: {fileID: 8300000, guid: 0117ab687bb2e4d48a2eddba97964cf6, type: 3}
   enemyDeath: {fileID: 8300000, guid: 215f58d6d88e7fd46a8c3fe5cf2b8566, type: 3}
-  enemyHitVolume: 0.25
-  enemyDeathVolume: 4
+  enemyHitVolume: 1
+  enemyDeathVolume: 1
 --- !u!114 &6654561464204625620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,3 +303,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &7600197338537888500
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6654561464204625581}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2e7e7f25335a53c419198e8d61f11307, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
