@@ -153,6 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fmodEvent: event:/background
+  LOW_MedTrigger: 10
+  Med_HighTrigger: 20
+  list: []
 --- !u!4 &22787286
 Transform:
   m_ObjectHideFlags: 0
@@ -575,9 +578,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 992995193}
     - target: {fileID: 1339472455963734237, guid: d50639da98820844d8484def168e5671, type: 3}
-      propertyPath: wallPrefab
+      propertyPath: soundcounter
       value: 
-      objectReference: {fileID: 5510738790273504833, guid: 182e953b1f9dd1d4790845e42a022315, type: 3}
+      objectReference: {fileID: 22787284}
     - target: {fileID: 4721698357031184903, guid: d50639da98820844d8484def168e5671, type: 3}
       propertyPath: m_Name
       value: MapGenerator
